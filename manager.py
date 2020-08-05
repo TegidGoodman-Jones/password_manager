@@ -87,7 +87,7 @@ def get_password(conn):
 	results = c.fetchall()
 
 	for result in results:
-		print('name = {}'.format(result[0]))
+		print('\nname = {}'.format(result[0]))
 		
 		password = cryption.decrypt_password(result[1])  # decrypting the password to readable format
 		print('password = {}'.format(password))
@@ -103,7 +103,7 @@ def get_all_passwords(conn):
 	results = c.fetchall()
 
 	for result in results:
-		print('name = {}'.format(result[0]))
+		print('\nname = {}'.format(result[0]))
 		password = cryption.decrypt_password(result[1])
 		print('password = {}\n'.format(password))
 
